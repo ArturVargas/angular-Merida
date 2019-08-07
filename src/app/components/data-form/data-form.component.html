@@ -1,0 +1,28 @@
+<div class="container">
+  <form (ngSubmit)="sendForm()" [formGroup]="loginForm">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" formControlName="email">
+      <div *ngIf="loginForm.controls.password.invalid">
+        <span>El password es requerido</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" formControlName="sexo">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" formControlName="desc" rows="3"></textarea>
+    </div>
+    <button class="btn btn-danger" type="submit" [disabled]="loginForm.invalid">Enviar</button>
+  </form>
+</div>

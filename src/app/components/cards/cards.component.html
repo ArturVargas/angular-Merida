@@ -1,0 +1,19 @@
+
+<div class="container mt-5">
+  <button class="btn btn-info" (click)="addBolsa()">Agregar Bolsa</button>
+</div>
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col-sm-6" *ngFor="let bolsa of bolsas; let idx = index">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{bolsa.tam}}</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <button class="btn btn-outline-info" (click)="getDetails(idx)">Ver detalles..!!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
